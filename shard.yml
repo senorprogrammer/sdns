@@ -1,0 +1,7 @@
+name: shards
+version: 0.1.0
+
+dependencies:
+  commander:
+    github: mrrooijen/commander
+    version: ~> 0.3.3
