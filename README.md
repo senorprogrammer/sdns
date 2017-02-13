@@ -11,7 +11,7 @@ A command-line DNS switcher for macOS.
 
 You could do:
 
-    System Preferences -> Network -> Wi-Fi -> Advanced -> DNS
+    Apple Menu -> System Preferences -> Network -> Wi-Fi -> Advanced -> DNS -> [+]
     
 and then manually type in your new DNS servers like a chump. Or you could just type:
 
