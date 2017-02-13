@@ -16,20 +16,16 @@ You could do:
 and then manually type in your new DNS servers like a chump. Or you could just type:
 
     $ sdns switch google
-
-or
-
-    $ sdns switch unblock-us
     
-and have it all done for you automatically.
+and have it done for you automatically.
 
-**Caveat:** At the moment it only works for the Wi-Fi interface.
+**Caveat:** At the moment `sdns` only works with the Wi-Fi interface.
 
 ## Installation
 
 This is a [Crystal](https://crystal-lang.org) app. Until I make a proper release, your best bet is to install Crystal via [Homebrew](https://brew.sh), download this source code, compile it yourself, and execute the binary.
 
-Still less effort than using the Network system pref to do it.
+Still less effort than clicking through the Network system pref to do things.
 
 ## Usage
 
