@@ -25,11 +25,21 @@ cli = Commander::Command.new do |cmd|
   end
 
   cmd.commands.add do |cmd|
+    cmd.use = "default"
+    cmd.short = "Reset to the default DNS servers."
+    cmd.long = cmd.short
+    cmd.run do |opts, args|
+      DnsList.new.default
+    end
+  end
+
+  cmd.commands.add do |cmd|
     cmd.use = "switch <id>"
     cmd.short = "Switch to the specified DNS set."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      puts "#{opts} | #{args}"
+      raise "Must provide a key value" if args.empty?
+      DnsList.new.switch(args[0])
     end
   end
 end
