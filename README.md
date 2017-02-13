@@ -23,13 +23,17 @@ and have it done for you automatically.
 
 **Caveat 1:** At the moment `sdns` only works with the Wi-Fi interface.
 
-**Caveat 2:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
+**Caveat 2:** You'll be asked to enter your user password to make any DNS settings changes. Don't be alarmed by this, it's perfectly normal.
 
-To check: `$ which networksetup`. You should see:
+<p align='center'>
+  <img src='docs/auth.png' width='800' height='499' alt='auth dialog' />
+</p>
 
-    /usr/sbin/networksetup
+**Caveat 3:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
+
+To check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
     
-**Caveat 3:** It works on my machine.
+**Caveat 4:** It works on my machine.
 
 ## Installation
 
