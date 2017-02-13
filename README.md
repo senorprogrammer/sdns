@@ -19,7 +19,9 @@ and then manually type in your new DNS servers like a chump. Or you could just t
     
 and have it done for you automatically.
 
-**Caveat:** At the moment `sdns` only works with the Wi-Fi interface.
+**Caveat 1:** At the moment `sdns` only works with the Wi-Fi interface.
+
+**Caveat 2:** If you don't have `networksetup` installed for some reason (and that would be pretty freaky if you're on macOS), things will not go well for you. To check: `which networksetup`.
 
 ## Installation
 
