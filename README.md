@@ -29,7 +29,7 @@ Still less effort than clicking through the Network system pref to do things.
 
 ## Usage
 
-First, make sure you have a `dns.yaml` file in the same directory as the binary. This source comes with one configured for Google, OpenDNS, and UnblockUs. Extend that at your leisure.
+First, make sure you have a `dns.yaml` file in the same directory as the binary. This source comes with one configured for [Google](https://developers.google.com/speed/public-dns/), [OpenDNS](https://use.opendns.com), and [UnblockUs](https://support.unblock-us.com/customer/portal/articles/291525?_ga=1.208644567.452473323.1486340879). Extend that at your leisure.
 
 `sdns` supports the following commands:
 
