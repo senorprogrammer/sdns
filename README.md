@@ -69,11 +69,30 @@ Switched your DNS settings back to their default settings, which is likely whate
 
 In other words, it deletes your custom settings.
 
+### help
+
+    $ ./sdns help
+    
+Returns help documentation describing all the available commands.
+
 ### list
 
     $ ./sdns list
     
 Displays a table of all the possible DNS settings you cand switch to. Available out of the box are Google, OpenDNS, and UnblockUs.
+
++-----+------------+----------------+
+| Key | Name       | Servers        |
++-----+------------+----------------+
+| 1   | google     | 8.8.8.8        |
+|     |            | 8.8.4.4        |
++-----+------------+----------------+
+| 2   | opendns    | 208.67.222.222 |
+|     |            | 208.67.220.220 |
++-----+------------+----------------+
+| 3   | unblock-us | 208.122.23.23  |
+|     |            | 208.122.23.22  |
++-----+------------+----------------+
 
 ### switch <id>
 
