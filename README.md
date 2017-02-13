@@ -26,7 +26,7 @@ and have it done for you automatically.
 **Caveat 2:** You'll be asked to enter your user password to make any DNS settings changes. Don't be alarmed by this, it's perfectly normal.
 
 <p align='center'>
-  <img src='docs/auth.png' width='800' height='499' alt='auth dialog' />
+  <img src='docs/auth.png' width='600' height='375' alt='auth dialog' />
 </p>
 
 **Caveat 3:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
