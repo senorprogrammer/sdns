@@ -21,7 +21,11 @@ and have it done for you automatically.
 
 **Caveat 1:** At the moment `sdns` only works with the Wi-Fi interface.
 
-**Caveat 2:** If you don't have `networksetup` installed for some reason (and that would be pretty freaky if you're on macOS), things will not go well for you. To check: `which networksetup`.
+**Caveat 2:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
+
+To check: `$ which networksetup`. You should see:
+
+    /usr/sbin/networksetup
 
 ## Installation
 
