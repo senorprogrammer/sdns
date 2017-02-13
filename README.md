@@ -81,17 +81,6 @@ Returns help documentation describing all the available commands.
     
 Displays a table of all the possible DNS settings you cand switch to. Available out of the box are Google, OpenDNS, and UnblockUs.
 
-
-| Key | Name       | Servers        |
-|-----|------------|----------------|
-| 1   | google     | 8.8.8.8        |
-|     |            | 8.8.4.4        |
-| 2   | opendns    | 208.67.222.222 |
-|     |            | 208.67.220.220 |
-| 3   | unblock-us | 208.122.23.23  |
-|     |            | 208.122.23.22  |
-
-
 ### switch <id>
 
     $ ./sdns switch 1
