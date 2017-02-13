@@ -24,11 +24,11 @@ class DnsList
     table.separate_rows = true
 
     @data["sets"].each do |set|
-      key = set["key"]
-      name = set["name"]
-      servers = set["servers"].join("\n")
-
-      table << [key.to_s, name.to_s, servers.to_s]
+      table << [
+        set["key"].to_s,
+        set["name"].to_s,
+        set["servers"].join("\n"),
+      ]
     end
 
     puts table.render
