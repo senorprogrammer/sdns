@@ -1,3 +1,12 @@
+<pre>
+         _           
+        | |          
+ ___  __| |_ __  ___ 
+/ __|/ _` | '_ \/ __|
+\__ \ (_| | | | \__ \
+|___/\__,_|_| |_|___/
+</pre>
+
 A command-line DNS switcher for macOS. 
 
 You could do:
