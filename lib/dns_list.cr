@@ -51,7 +51,6 @@ class DnsList
     set = find_set_by_name(val) unless set
 
     if set
-      name = set["name"]
       servers = set["servers"].join(" ")
 
       `networksetup -setdnsservers #{@interface} #{servers}`
