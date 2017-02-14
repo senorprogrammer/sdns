@@ -1,7 +1,13 @@
 require "commander"
+require "config_file"
 require "dns_list"
 require "terminal_table"
 require "version"
+
+# First check that there's a .sdns.yaml file in the current user's home directory
+# If there isn't, copy one there with the default server options
+config_file = Sdns::ConfigFile.new
+config_file.create
 
 cli = Commander::Command.new do |cmd|
   cmd.use = "sdns"
