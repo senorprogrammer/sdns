@@ -2,7 +2,7 @@ require "yaml"
 
 module Sdns
   class DnsList
-    DEFAULT_DNS_FILE = "./.sdns.yaml"
+    DEFAULT_DNS_FILE = "~/.sdns.yaml"
 
     def initialize(file_path : String = "", interface : String = "Wi-Fi")
       @file = file_path.blank? ? DEFAULT_DNS_FILE : file_path
