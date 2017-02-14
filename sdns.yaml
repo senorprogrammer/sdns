@@ -1,1 +1,16 @@
-cats
+sets:
+    - name: google
+      key: 1
+      servers:
+          - 8.8.8.8
+          - 8.8.4.4
+    - name: opendns
+      key: 2
+      servers:
+          - 208.67.222.222
+          - 208.67.220.220
+    - name: unblock-us
+      key: 3
+      servers:
+          - 208.122.23.23
+          - 208.122.23.22

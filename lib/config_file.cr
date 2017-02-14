@@ -4,7 +4,7 @@
 #
 module Sdns
   class ConfigFile
-    DEFAULT_DNS_FILE = "~/.sdns.yaml"
+    DEFAULT_DNS_FILE = "#{Dir.home}/.sdns.yaml"
 
     getter :file_path
 
