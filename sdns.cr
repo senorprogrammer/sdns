@@ -1,6 +1,7 @@
 require "commander"
 require "dns_list"
 require "terminal_table"
+require "version"
 
 cli = Commander::Command.new do |cmd|
   cmd.use = "sdns"
@@ -11,7 +12,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "Displays the current DNS settings."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      DnsList.new.current
+      Sdns::DnsList.new.current
     end
   end
 
@@ -20,7 +21,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "Reset to the default DNS servers."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      DnsList.new.default
+      Sdns::DnsList.new.default
     end
   end
   cmd.commands.add do |cmd|
@@ -28,7 +29,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "List the available DNS sets."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      DnsList.new.list
+      Sdns::DnsList.new.list
     end
   end
 
@@ -38,7 +39,7 @@ cli = Commander::Command.new do |cmd|
     cmd.long = cmd.short
     cmd.run do |opts, args|
       raise "Must provide a key value" if args.empty?
-      DnsList.new.switch(args[0])
+      Sdns::DnsList.new.switch(args[0])
     end
   end
 
@@ -47,7 +48,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "Displays the version."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      puts "0.0.1"
+      puts Sdns::VERSION
     end
   end
 end
