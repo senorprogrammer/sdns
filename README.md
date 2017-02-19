@@ -37,19 +37,58 @@ To check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
 
 ## Installation
 
-This is a [Crystal](https://crystal-lang.org) app. Until I make a proper release, your best bet is to install Crystal via [Homebrew](https://brew.sh), download this source code, compile it yourself, and execute the binary.
+This is a [Crystal](https://crystal-lang.org) app. Until I make a proper release, your best bet is to install Crystal via [Homebrew](https://brew.sh), download this source code, compile, and install it yourself.
+
+### Installing for development
+
+You'd like to try it before installing it, or want to change the source:
+
+`cd ./sdns`
+
+`make build`, or `make debug`, or `make run`
+
+Check the Makefile for details on the differences between each.
+
+### Installing the binary
+
+You don't care about the source or mucking about with it, you just want to use this app to switch your DNS. You just need the app installed. Fortunately there's a Makefile command for that as well:
+
+` cd ./sdns`
+
+`make install`
+
+The installation process:
+
+* compiles the excutable binary
+* copies that binary to `/usr/local/bin`
+* a `.sdns.yaml` config file is copied to your home directory
 
 Still less effort than clicking through the Network system pref to do things.
 
+### Uninstalling the binary
+
+Similar process:
+
+`cd ./sdns`
+
+`make uninstall`
+
+The uninstallation process:
+
+* removes the binary from `/usr/local/bin`
+* removed the `.sdns.yaml` file from your home directory
+
 ## Usage
 
-First, make sure you have a `dns.yaml` file in the same directory as the binary. This source comes with one configured for [Google](https://developers.google.com/speed/public-dns/), [OpenDNS](https://use.opendns.com), and [UnblockUs](https://support.unblock-us.com/customer/portal/articles/291525?_ga=1.208644567.452473323.1486340879). Extend that at your leisure.
+First, make sure you have a `.sdns.yaml` file in your user's home directory (`$ ls -al ~ | grep sdns`). 
+
+This source comes with one configured for [Google](https://developers.google.com/speed/public-dns/), [OpenDNS](https://use.opendns.com), and [UnblockUs](https://support.unblock-us.com/customer/portal/articles/291525?_ga=1.208644567.452473323.1486340879) that will be written to that location the first time you run the app. Extend that at your leisure.
 
 `sdns` supports the following commands:
 
 ### current
 
-    $ ./sdns current
+    $ sdns current
     
 Displays your current DNS settings. If you have custom settings configured, it'll display those:
 
@@ -63,7 +102,7 @@ If you don't yet have any custom settings configured, you'll see a message like:
     
 ### default
 
-    $ ./sdns default
+    $ sdns default
     
 Switched your DNS settings back to their default settings, which is likely whatever your router or ISP provide.
 
@@ -71,31 +110,37 @@ In other words, it deletes your custom settings.
 
 ### help
 
-    $ ./sdns help
+    $ sdns help
     
 Returns help documentation describing all the available commands.
 
 ### list
 
-    $ ./sdns list
+    $ sdns list
     
 Displays a table of all the possible DNS settings you cand switch to. Available out of the box are Google, OpenDNS, and UnblockUs.
 
 ### switch <id>
 
-    $ ./sdns switch 1
+    $ sdns switch 1
     
 or
 
-    $ ./sdns switch google
+    $ sdns switch google
     
 Switches your DNS settings to the specified provider. 
 
 You can also use:
 
-    $ ./sdns switch empty
+    $ sdns switch empty
     
 to delete any custom settings. This is effectively the same as `./sdns default`.
+
+### version
+
+    $ sdns --version
+    
+Displays the current app version.
 
 ## License
 
