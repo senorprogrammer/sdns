@@ -9,6 +9,8 @@ require "version"
 config_file = Sdns::ConfigFile.new
 config_file.create
 
+dns_list = Sdns::DnsList.new(config_file)
+
 cli = Commander::Command.new do |cmd|
   cmd.use = "sdns"
   cmd.long = "Utility for switching DNS server sets from the command line."
@@ -18,7 +20,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "Displays the current DNS settings."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      Sdns::DnsList.new.current
+      dns_list.current
     end
   end
 
@@ -27,7 +29,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "Reset to the default DNS servers."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      Sdns::DnsList.new.default
+      dns_list.default
     end
   end
   cmd.commands.add do |cmd|
@@ -35,7 +37,7 @@ cli = Commander::Command.new do |cmd|
     cmd.short = "List the available DNS sets."
     cmd.long = cmd.short
     cmd.run do |opts, args|
-      Sdns::DnsList.new.list
+      dns_list.list
     end
   end
 
@@ -45,7 +47,7 @@ cli = Commander::Command.new do |cmd|
     cmd.long = cmd.short
     cmd.run do |opts, args|
       raise "Must provide a key value" if args.empty?
-      Sdns::DnsList.new.switch(args[0])
+      dns_list.switch(args[0])
     end
   end
 

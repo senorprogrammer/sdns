@@ -2,13 +2,11 @@ require "yaml"
 
 module Sdns
   class DnsList
-    DEFAULT_DNS_FILE = "~/.sdns.yaml"
-
-    def initialize(file_path : String = "", interface : String = "Wi-Fi")
-      @file = file_path.blank? ? DEFAULT_DNS_FILE : file_path
+    def initialize(config_file : Sdns::ConfigFile, interface : String = "Wi-Fi")
+      @config_file = config_file
       @interface = interface
 
-      @data = YAML.parse(File.read(@file))
+      @data = YAML.parse(File.read(config_file.dns_file_path))
     end
 
     # Returns whatever the OS says are the current DNS settings
