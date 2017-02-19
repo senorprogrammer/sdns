@@ -6,6 +6,11 @@ module Sdns
       @config_file = config_file
       @interface = interface
 
+      unless config_file.exists?
+        puts "Could not find #{config_file.dns_file_path}. Exiting."
+        exit
+      end
+
       @data = YAML.parse(File.read(config_file.dns_file_path))
     end
 
