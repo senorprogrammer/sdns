@@ -51,7 +51,7 @@ Check the Makefile for details on the differences between each.
 
 ### Installing the binary
 
-You don't care about the source or mucking about with it, you just want to use this app to switch your DNS. You just need the app installed. Fortunately there's a Makefile command for that as well:
+You don't care about the source or mucking about with it, you just want to use this app to switch your DNS. You just need the app installed:
 
 ` cd ./sdns`
 
