@@ -2,15 +2,25 @@ sets:
     - name: google
       key: 1
       servers:
-          - 8.8.8.8
-          - 8.8.4.4
+        - 8.8.8.8
+        - 8.8.4.4
     - name: opendns
       key: 2
       servers:
-          - 208.67.222.222
-          - 208.67.220.220
-    - name: unblock-us
+        - 208.67.222.222
+        - 208.67.220.220
+    - name: verisign
       key: 3
       servers:
-          - 208.122.23.23
-          - 208.122.23.22
+        - 64.6.64.6
+        - 64.6.65.6
+    - name: unblock-us
+      key: 4
+      servers:
+        - 208.122.23.23
+        - 208.122.23.22
+    - name: dyn
+      key: 5
+      servers:
+        - 216.146.35.35
+        - 216.146.36.36
