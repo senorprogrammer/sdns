@@ -19,6 +19,20 @@ and then manually type in your new DNS servers like a chump. Or you could just t
     
 and have it done for you automatically.
 
+- [Caveats](#caveats)
+- [Installation](#installation)
+	- [Installing for development](#installing-for-development)
+	- [Installing the binary](#installing-the-binary)
+	- [Uninstalling the binary](#uninstalling-the-binary)
+- [Usage](#usage)
+	- [current](#current)
+	- [default](#default)
+	- [help](#help)
+	- [list](#list)
+	- [switch ](#switch)
+	- [version](#version)
+- [License](#license)
+
 ## Caveats
 
 **Caveat 1:** At the moment `sdns` only works with the Wi-Fi interface.
