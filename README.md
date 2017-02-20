@@ -19,6 +19,8 @@ and then manually type in your new DNS servers like a chump. Or you could just t
     
 and have it done for you automatically.
 
+---
+
 - [Caveats](#caveats)
 - [Installation](#installation)
 	- [Installing for development](#installing-for-development)
