@@ -4,12 +4,10 @@ require "dns_list"
 require "terminal_table"
 require "version"
 
-# First check that there's a .sdns.yaml file in the current user's home directory
-# If there isn't, copy one there with the default server options
 config_file = Sdns::ConfigFile.new
-config_file.create
+config_file.write
 
-dns_list = Sdns::DnsList.new(config_file)
+dns_list = Sdns::DnsList.new
 
 cli = Commander::Command.new do |cmd|
   cmd.use = "sdns"
@@ -32,6 +30,16 @@ cli = Commander::Command.new do |cmd|
       dns_list.default
     end
   end
+
+  cmd.commands.add do |cmd|
+    cmd.use = "flush"
+    cmd.short = "Flush the DNS cache."
+    cmd.long = cmd.short
+    cmd.run do |opts, args|
+      dns_list.flush
+    end
+  end
+
   cmd.commands.add do |cmd|
     cmd.use = "list"
     cmd.short = "List the available DNS sets."

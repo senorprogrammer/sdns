@@ -2,16 +2,9 @@ require "yaml"
 
 module Sdns
   class DnsList
-    def initialize(config_file : Sdns::ConfigFile, interface : String = "Wi-Fi")
-      @config_file = config_file
+    def initialize(interface : String = "Wi-Fi")
       @interface = interface
-
-      unless config_file.exists?
-        puts "Could not find #{config_file.dns_file_path}. Exiting."
-        exit
-      end
-
-      @data = YAML.parse(File.read(config_file.dns_file_path))
+      @data = YAML.parse(File.read(Sdns::ConfigFile::DEFAULT_DNS_FILE))
     end
 
     # Returns whatever the OS says are the current DNS settings
@@ -21,6 +14,11 @@ module Sdns
       set = find_set_by_ip_address(result.split("\n").first)
 
       puts (set["name"].to_s + ":") if set
+      puts result
+    end
+
+    def flush
+      result = `sudo killall -HUP mDNSResponder`
       puts result
     end
 
