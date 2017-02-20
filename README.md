@@ -60,9 +60,8 @@ This is a [Crystal](https://crystal-lang.org) app. Until I make a proper release
 
 You'd like to try it before installing it, or want to change the source:
 
-`cd ./sdns`
-
-`make build`, or `make debug`, or `make run`
+    cd ./sdns
+    make build, make debug, or make run
 
 Check the Makefile for details on the differences between each.
 
@@ -70,9 +69,8 @@ Check the Makefile for details on the differences between each.
 
 You don't care about the source or mucking about with it, you just want to use this app to switch your DNS. You just need the app installed:
 
-` cd ./sdns`
-
-`make install`
+    cd ./sdns
+    make install
 
 The installation process:
 
@@ -86,9 +84,8 @@ Still less effort than clicking through the Network system pref to do things.
 
 Similar process:
 
-`cd ./sdns`
-
-`make uninstall`
+    cd ./sdns
+    make uninstall
 
 The uninstallation process:
 
