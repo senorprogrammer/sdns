@@ -29,6 +29,7 @@ and have it done for you automatically.
 - [Usage](#usage)
 	- [current](#current)
 	- [default](#default)
+	- [flush](#flush)
 	- [help](#help)
 	- [list](#list)
 	- [switch ](#switch)
@@ -123,6 +124,12 @@ If you don't yet have any custom settings configured, you'll see a message like:
 Switched your DNS settings back to their default settings, which is likely whatever your router or ISP provide.
 
 In other words, it deletes your custom settings.
+
+### flush
+
+    $ sdns flush
+    
+Flushes your DNS cache (may not work in earlier OS X releases).
 
 ### help
 
