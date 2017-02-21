@@ -48,9 +48,7 @@ and have it done for you automatically.
 
 **Caveat 3:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
 
-To check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
-    
-**Caveat 4:** It works on my machine.
+To double-check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
 
 ## Installation
 
