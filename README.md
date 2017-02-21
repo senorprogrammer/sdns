@@ -17,7 +17,7 @@ and then manually type in your new DNS servers like a chump. Or you could just t
 
     $ sdns switch google
     
-and have it done for you automatically.
+and have it done automatically.
 
 ---
 
