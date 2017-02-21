@@ -124,13 +124,13 @@ In other words, it deletes your custom settings.
 
     $ sdns flush
     
-Flushes your DNS cache (may not work in earlier OS X releases).
+Flushes your DNS cache (works on Sierra; may not yet work in earlier OS X releases).
 
 ### help
 
     $ sdns help
     
-Returns help documentation describing all the available commands.
+Displays help documentation describing all the available commands.
 
 ### list
 
