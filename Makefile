@@ -14,6 +14,9 @@ install:
 run:
 	crystal ./sdns.cr
 
+test:
+	crystal spec
+
 uninstall:
 	rm /usr/local/bin/sdns
 	rm ~/.sdns.yaml
