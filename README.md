@@ -17,7 +17,7 @@ and then manually type in your new DNS servers like a chump. Or you could just t
 
     $ sdns switch google
     
-and have it done for you automatically.
+and have it done automatically.
 
 ---
 
@@ -48,9 +48,7 @@ and have it done for you automatically.
 
 **Caveat 3:** If you don't have `networksetup` installed for some reason (the absence of which would be pretty freaky if you're on macOS), things will not go well for you. 
 
-To check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
-    
-**Caveat 4:** It works on my machine.
+To double-check: `$ which networksetup`. You should see `/usr/sbin/networksetup`.
 
 ## Installation
 
@@ -61,7 +59,7 @@ This is a [Crystal](https://crystal-lang.org) app. Until I make a proper release
 You'd like to try it before installing it, or want to change the source:
 
     cd ./sdns
-    make build, make debug, or make run
+    `make build`, `make debug`, or `make run`
 
 Check the Makefile for details on the differences between each.
 
@@ -76,7 +74,7 @@ The installation process:
 
 * compiles the excutable binary
 * copies that binary to `/usr/local/bin`
-* a `.sdns.yaml` config file is copied to your home directory
+* copies a `.sdns.yaml` config file to your home directory
 
 Still less effort than clicking through the Network system pref to do things.
 
@@ -94,7 +92,7 @@ The uninstallation process:
 
 ## Usage
 
-First, make sure you have a `.sdns.yaml` file in your user's home directory (`$ ls -al ~ | grep sdns`). 
+First, ensure that `.sdns.yaml` is in your home directory (`$ ls -al ~ | grep sdns`). 
 
 This source comes with one configured for [Google](https://developers.google.com/speed/public-dns/), [OpenDNS](https://use.opendns.com), and [UnblockUs](https://support.unblock-us.com/customer/portal/articles/291525?_ga=1.208644567.452473323.1486340879) that will be written to that location the first time you run the app. Extend that at your leisure.
 
@@ -110,7 +108,7 @@ Displays your current DNS settings. If you have custom settings configured, it'l
         8.8.8.8
         8.8.4.4
         
-If you don't yet have any custom settings configured, you'll see a message like:
+If you don't yet have any custom settings configured, you'll see this message:
 
     There aren't any DNS Servers set on Wi-Fi.
     
@@ -126,13 +124,13 @@ In other words, it deletes your custom settings.
 
     $ sdns flush
     
-Flushes your DNS cache (may not work in earlier OS X releases).
+Flushes your DNS cache (works on Sierra; may not yet work in earlier OS X releases).
 
 ### help
 
     $ sdns help
     
-Returns help documentation describing all the available commands.
+Displays help documentation describing all the available commands.
 
 ### list
 
