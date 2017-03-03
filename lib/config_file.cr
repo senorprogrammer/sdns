@@ -8,7 +8,6 @@ require "dir2"
 module Sdns
   class ConfigFile
     DNS_TEMPLATE_URL = "https://raw.githubusercontent.com/senorprogrammer/sdns/master/sdns.yaml"
-    # DEFAULT_DNS_FILE = ENV["HOME"] + "/.sdns.yaml"
     DEFAULT_DNS_FILE = Dir2.home + "/.sdns.yaml"
 
     def exists?
